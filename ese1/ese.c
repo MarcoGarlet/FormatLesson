@@ -7,16 +7,16 @@ int main(){
 	char s[800];
 	unsigned long long random_number = rand()%(1ULL<<64-1); // random number from 0 to max 64 bit representation
 	unsigned long long guess;
-	printf("\nTell me who are you: ");
+	printf("Tell me who are you: \n");
 	if(fgets(s,800,stdin)!=NULL){
-		fflush(stdout);
+		//fflush(stdout);
 		puts("Hi ");
 		printf(s);
 		puts("\nTell me my secret: ");
 		scanf("%llu",&guess);
 		printf("\nGuess = %llu\n",guess);
 		if(guess == random_number){
-			printf("\nl4s3rCTF{%lu th3 numb3r 0f th3 b345t!!!}\n",guess);
+			printf("\nl4s3rCTF{%llu th3 numb3r 0f th3 b345t!!!}\n",guess);
 		}
 		else{
 			printf("\nThe number was %llu\nBye!\n",random_number);

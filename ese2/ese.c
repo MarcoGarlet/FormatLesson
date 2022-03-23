@@ -1,16 +1,18 @@
 #include<stdio.h>
 
 int main(){
+	int i;
 	char s1[50];
 	char s[200];	
-	printf("Who are you?\n");
-	if (fgets(s,200,stdin)!=NULL){
+	for (i = 0;i<2;i++){
+		printf("Who are you?\n");
+		fgets(s,200,stdin);
 		printf("Thank u!\n");
 		printf(s);
-		printf("Give me some bytes, be kind!\n");
-		gets(s1);	
-		printf("Thank u\n");	
 	}
+	printf("Give me some bytes, be kind!\n");
+	gets(s1);	
+	printf("Thank u\n");	
 		
 	
 

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -z execstack -no-pie -fstack-protector -no-pie -m32 -mpreferred-stack-boundary=2 
+CFLAGS = -g -z execstack -no-pie -fstack-protector -no-pie -m32 -mpreferred-stack-boundary=2 
 TARGET = ese
 all: $(TARGET)
 $(TARGET): $(TARGET).c
